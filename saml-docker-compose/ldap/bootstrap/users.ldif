@@ -1,0 +1,66 @@
+dn: uid=wangchen,ou=users,ou=system
+changetype: add
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: tlsKeyInfo
+cn: saml user 
+keyAlgorithm: RSA
+privateKey:: MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAmcVy8ijwWTowty0
+ 89RsZz6ccGFjKHJuQ4Mx6ZmnU8jEQc2WWKYJIa9mx3HK35UAPwvqSSs0/ZPxTdj5XgNrE2QIDAQ
+ ABAkACH5jjwS74fHY5wVUrKVGk7XDU4T0BQiCxCgHSsjlvkrpHMe3Hf2DeeufsGYay+8evsK+mO
+ /tQA07anzCso/EFAiEA9EMw5LwfOS51UXh+e44tTOGbMqNVOrXqiuTJkanGIqMCIQChKRNSQulS
+ CbCjbgK4GCPTuEApXXXiLMW6ccMLeY7uUwIhAOvq4ZRq5jVSW9l+aZtobPRuinlULANypL/VzaG
+ 0ujvFAiAUXvjOQR70+7yUK+e0FXkR3gxeLi4kdLxZoN+ip67leQIgQYf4ukU01wCkTdhmAbI06+
+ 6i+KgYe3np+YE06VKndxA=
+privateKeyFormat: PKCS#8
+publicKey:: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJnFcvIo8Fk6MLctPPUbGc+nHBhYyhyb
+ kODMemZp1PIxEHNllimCSGvZsdxyt+VAD8L6kkrNP2T8U3Y+V4DaxNkCAwEAAQ==
+publicKeyFormat: X.509
+sn: administrator
+displayName: Chen Wang 
+uid: wangchen
+userCertificate:: MIIBbzCCARkCBgFUhPC0wDANBgkqhkiG9w0BAQUFADBCMQswCQYDVQQGEw
+ JVUzEMMAoGA1UEChMDQVNGMRIwEAYDVQQLEwlEaXJlY3RvcnkxETAPBgNVBAMTCEFwYWNoZURTM
+ B4XDTE2MDUwNjA3MjA0OFoXDTE3MDUwNjA3MjA0OFowPjELMAkGA1UEBhMCVVMxDDAKBgNVBAoT
+ A0FTRjESMBAGA1UECxMJRGlyZWN0b3J5MQ0wCwYDVQQDEwRzaGliMFwwDQYJKoZIhvcNAQEBBQA
+ DSwAwSAJBAJnFcvIo8Fk6MLctPPUbGc+nHBhYyhybkODMemZp1PIxEHNllimCSGvZsdxyt+VAD8
+ L6kkrNP2T8U3Y+V4DaxNkCAwEAATANBgkqhkiG9w0BAQUFAANBAClrS894RNgFiUSFnQj622NC/
+ ObMExWKS+9MghzjNfPZmen9JWHifx5v5rHDrybQz/0pyGNODhXHmPPAfA9giMM=
+userPassword:: e1NTSEF9L05hQ29MdzZURXdxckw5NDZTTmRwZDJkbm9YdW1VaXBSNDBEcmc9P
+ Q==
+
+dn: uid=samler,ou=users,ou=system
+changetype: add
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: tlsKeyInfo
+cn: saml user
+keyAlgorithm: RSA
+privateKey:: MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAmcVy8ijwWTowty0
+ 89RsZz6ccGFjKHJuQ4Mx6ZmnU8jEQc2WWKYJIa9mx3HK35UAPwvqSSs0/ZPxTdj5XgNrE2QIDAQ
+ ABAkACH5jjwS74fHY5wVUrKVGk7XDU4T0BQiCxCgHSsjlvkrpHMe3Hf2DeeufsGYay+8evsK+mO
+ /tQA07anzCso/EFAiEA9EMw5LwfOS51UXh+e44tTOGbMqNVOrXqiuTJkanGIqMCIQChKRNSQulS
+ CbCjbgK4GCPTuEApXXXiLMW6ccMLeY7uUwIhAOvq4ZRq5jVSW9l+aZtobPRuinlULANypL/VzaG
+ 0ujvFAiAUXvjOQR70+7yUK+e0FXkR3gxeLi4kdLxZoN+ip67leQIgQYf4ukU01wCkTdhmAbI06+
+ 6i+KgYe3np+YE06VKndxA=
+privateKeyFormat: PKCS#8
+publicKey:: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJnFcvIo8Fk6MLctPPUbGc+nHBhYyhyb
+ kODMemZp1PIxEHNllimCSGvZsdxyt+VAD8L6kkrNP2T8U3Y+V4DaxNkCAwEAAQ==
+publicKeyFormat: X.509
+sn: administrator
+displayName: Chen Wang
+uid: wangchen
+userCertificate:: MIIBbzCCARkCBgFUhPC0wDANBgkqhkiG9w0BAQUFADBCMQswCQYDVQQGEw
+ JVUzEMMAoGA1UEChMDQVNGMRIwEAYDVQQLEwlEaXJlY3RvcnkxETAPBgNVBAMTCEFwYWNoZURTM
+ B4XDTE2MDUwNjA3MjA0OFoXDTE3MDUwNjA3MjA0OFowPjELMAkGA1UEBhMCVVMxDDAKBgNVBAoT
+ A0FTRjESMBAGA1UECxMJRGlyZWN0b3J5MQ0wCwYDVQQDEwRzaGliMFwwDQYJKoZIhvcNAQEBBQA
+ DSwAwSAJBAJnFcvIo8Fk6MLctPPUbGc+nHBhYyhybkODMemZp1PIxEHNllimCSGvZsdxyt+VAD8
+ L6kkrNP2T8U3Y+V4DaxNkCAwEAATANBgkqhkiG9w0BAQUFAANBAClrS894RNgFiUSFnQj622NC/
+ ObMExWKS+9MghzjNfPZmen9JWHifx5v5rHDrybQz/0pyGNODhXHmPPAfA9giMM=
+userPassword:: e1NTSEF9L05hQ29MdzZURXdxckw5NDZTTmRwZDJkbm9YdW1VaXBSNDBEcmc9P
+ Q==
+
