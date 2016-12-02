@@ -1,7 +1,7 @@
 version: '2'
 services:
   cs:
-    image: 10.62.87.31:5000/subbu/ubuntupgrccs 
+    image: 10.8.46.202:5000/subbu/ubuntupgrccs
     ports: 
       - "1689:1689"
       - "1690:1690"
@@ -15,7 +15,7 @@ services:
     hostname: ubuntupgcs
     command: /bin/bash -c "./start-db ${ExternalIP}"
   rest:
-    image: 10.62.87.31:5000/restapi/ubuntu/stateless/restapi
+    image: 10.8.46.202:5000/restapi/ubuntu/stateless/restapi:7.3.0000.0590
     ports:
       - "8080:8080"
       - "8443:8443"
@@ -29,7 +29,7 @@ services:
     depends_on:
       - cs
   primary: 
-    image: 10.62.87.31:5000/xplore/ubuntu/stateless/xplore
+    image: 10.8.46.202:5000/xplore/ubuntu/stateless/xplore:1.6.0000.0835
     hostname: primary
     container_name: primary
     ports:
@@ -39,7 +39,7 @@ services:
     depends_on:
       - cs
   cps:
-    image: 10.62.87.31:5000/xplore/ubuntu/stateless/xplore
+    image: 10.8.46.202:5000/xplore/ubuntu/stateless/xplore:1.6.0000.0835
     hostname: cps
     container_name: cps
     environment:
@@ -48,7 +48,7 @@ services:
     depends_on:
       - primary
   indexagent:
-    image: 10.62.87.31:5000/indexagent/ubuntu/stateless/indexagent
+    image: 10.8.46.202:5000/indexagent/ubuntu/stateless/indexagent:1.6.0000.0835
     hostname: indexagent
     container_name: indexagent
     ports:

@@ -1,4 +1,4 @@
-FROM docker.local:5000/rest
+FROM 10.8.46.202:5000/restapi/ubuntu/stateless/restapi:7.3.0000.0590
 
 MAINTAINER chen.wang@emc.com
 
