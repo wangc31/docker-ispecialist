@@ -1,4 +1,4 @@
-FROM docker.local:5000/unicon-shibboleth-idp
+FROM rest-shib-idp
 
 MAINTAINER chen.wang@emc.com
 
