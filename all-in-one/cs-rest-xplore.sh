@@ -32,7 +32,7 @@ docker-compose up -d rest
 check_connectivity "DCTM REST" "http://localhost:8080/dctm-rest/repositories/" 200 30 2
 
 
-#if full text search is not needed, just remove the two line below.
+#if full text search is not needed, just remove the lines below.
 docker-compose up -d cps
 check_connectivity "xPlore" "http://localhost:9300/dsearch/" 259 60 5
 
