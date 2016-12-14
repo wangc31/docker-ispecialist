@@ -25,6 +25,8 @@ docker-compose up -d cs
 sleep 10
 docker exec -d -it ubuntupgcs bash -c "/home/dmadmin/dctm/wildfly9.0.1/server/startMethodServer.sh"
 
+
+mkdir -pv rest/config
 docker cp ubuntupgcs:/home/dmadmin/dctm/config/dfc.properties rest/config/
 docker-compose up -d rest
 check_connectivity "DCTM REST" "http://localhost:8080/dctm-rest/repositories/" 200 30 2
