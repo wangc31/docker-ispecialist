@@ -65,25 +65,6 @@ curl http://<DOCKER_HOST_IP>:8080/dctm-rest/repositories/ubuntudb/search?q=dmadm
 ```
 
 ##Script
-This is quite rough now. It should have services check to be a real production script.
-
-```shell
-#!/bin/bash
-
-docker-compose up -d cs
-sleep 10
-docker exec -d -it ubuntupgcs bash -c "/home/dmadmin/dctm/wildfly9.0.1/server/startMethodServer.sh"
-
-docker cp ubuntupgcs:/home/dmadmin/dctm/config/dfc.properties rest/config/
-docker-compose up -d rest
-
-#if full text search is not needed, just remove the two line below.
-docker-compose up -d cps
-docker-compose up -d indexagent
-```
-
-
+Here is the script to launch the suite, 
 
 Run the script `./cs-rest-xplore.sh`. It will take several minutes to start.
-
-How to check the status of REST, xPlore and index agent is mentioned above.
