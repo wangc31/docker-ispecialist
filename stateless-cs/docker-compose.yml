@@ -90,7 +90,47 @@ services:
      - centdb_Thumbnail_Server_conf:/opt/dctm/product/7.3/thumbsrv/conf
      - centdb_Thumbnail_Server_webinf:/opt/dctm/product/7.3/thumbsrv/container/webapps/thumbsrv/WEB-INF
     privileged: true
+  primary: 
+    image: 10.8.46.202:5000/xplore/ubuntu/stateless/xplore:1.6.0000.0835
+    hostname: primary
+    container_name: primary
+    ports:
+      - "9300:9300"
+    volumes:
+      - xplore:/root/xPlore/rtdata
+    depends_on:
+      - centstateless
+  cps:
+    image: 10.8.46.202:5000/xplore/ubuntu/stateless/xplore:1.6.0000.0835
+    hostname: cps
+    container_name: cps
+    environment:
+      - role=cps
+      - primary_addr=primary
+    depends_on:
+      - primary
+  indexagent:
+    image: 10.8.46.202:5000/indexagent/ubuntu/stateless/indexagent:1.6.0000.0835
+    hostname: indexagent
+    container_name: indexagent
+    ports:
+      - "9200:9200"
+    environment:
+      - primary_addr=primary
+      - docbase_name=centdb
+      - docbase_user=dmadmin
+      - docbase_password=password
+      - broker_host=centstateless
+      - broker_port=1489
+      - registry_name=centdb
+      - registry_user=dm_bof_registry
+      - registry_password=password
+    depends_on:
+      - primary
+    volumes_from:
+      - primary
 volumes:
+ xplore: {}
  centdb_data:
     driver: local
  
