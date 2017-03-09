@@ -3,7 +3,7 @@ version: "2"
 services:
 
   client-docker:
-    image: dorowu/ubuntu-desktop-lxde-vnc
+    image: dorowu/ubuntu-desktop-lxde-vnc:release-v1.1
     container_name: client-docker
     ports:
      - "6080:6080"
