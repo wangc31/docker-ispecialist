@@ -1,4 +1,4 @@
-FROM rest-shib-idp
+FROM unicon/shibboleth-idp:3.3.0
 
 MAINTAINER chen.wang@emc.com
 
@@ -25,3 +25,6 @@ sed -i 's|https:\/\/sp.example.org|'"${REST_ENTITY_ID}"'|' ${SHIB_HOME}/conf/rel
 
 # modify metadata-providers.xml
 RUN sed -i '$ i <MetadataProvider id=\"HTTPMetadataREST\" xsi:type=\"FileBackedHTTPMetadataProvider\"\ndisregardTLSCertificate=\"true\"\nbackingFile=\"'"${SHIB_HOME}"'/metadata/rest-docker.xml\"\nmetadataURL=\"'"${REST_ENTITY_ID}"'\"\/>\n' ${SHIB_HOME}/conf/metadata-providers.xml
+
+#this is a workaround for image issue. the port defined in this file is 4443, but metadata generated is 443
+RUN sed -i 's/4443/443/' /opt/shib-jetty-base/start.d/ssl.ini
